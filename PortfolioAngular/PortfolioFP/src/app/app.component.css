@@ -1,0 +1,9 @@
+body {
+    background-image: url("/assets/img/FrontPage.svg"), url("/assets/img/Back.png");
+    background-position: center, center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: auto, cover;
+    padding: 100em, 100em;
+
+  }
