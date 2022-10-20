@@ -1,0 +1,12 @@
+
+.piecito {
+    background: linear-gradient(180deg, #434343 0%, #252525 29.17%, #212121 66.67%, #000000 100%);
+  }
+
+  .piecito.liviano{
+    filter: brightness(175%);
+  }
+
+  .piecito.liviano.texto{
+    font-size: smaller;
+  }

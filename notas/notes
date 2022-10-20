@@ -1,0 +1,9 @@
+SELECT secciones.id, conceptos.titulo, conceptos.contenido, conceptos.id
+FROM conceptos
+INNER JOIN secciones ON secciones.id=conceptos.secciones_id;
+
+
+
+ @Query("select new com.example.resume.Entity.Dto.ResumeDto (a.experienceName, e.schoolName,e.firstYear, e.endYear, a.experienceDescription) " +
+            "from Resume j ,Education e , Experience a where j.experience.id=a.id and j.education.id=e.id")
+ List<ResumeDto> getResumeDto();

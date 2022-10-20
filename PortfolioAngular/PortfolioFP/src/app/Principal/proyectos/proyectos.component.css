@@ -1,0 +1,6 @@
+.cuadro{
+    border: 1px solid #B9BC1D;
+}
+.shadow{
+    box-shadow: 3px 2px 3px 0.1px #B9BC1D !important;
+}

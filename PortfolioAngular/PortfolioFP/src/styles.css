@@ -1,1 +1,52 @@
-/* You can add global styles to this file, and also import other style files */
+.navbar .navbar-brand {
+  font-family: "Waiting for the Sunrise";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 60px;
+  text-transform: uppercase;
+  color: #B9BC1D;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(185,188,29, 100.0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/></svg>");
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: #B9BC1D;
+}
+
+.btns {
+  background: #666666;
+  mix-blend-mode: lighten;
+  border-radius: 20px;
+}
+
+.container.name {
+  background: #333333;
+  border-radius: 20px;
+}
+
+.btn {
+  border-radius: 20px !important;
+}
+
+.btn:hover {
+  background: linear-gradient(180deg, #434343 0%, #252525 29.17%, #212121 66.67%, #000000 100%);
+  border-radius: 20px !important;
+  border: #666666 25px !important;
+}
+
+.texto {
+  font-family: "Waiting for the Sunrise";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 60px;
+  color: #B9BC1D;
+}
+
+.titulocomps {
+  background: linear-gradient(180deg, #000000 0%, #252525 29.17%, #212121 66.67%, #434343 100%);
+  border-radius: 50px;
+}
