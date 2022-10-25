@@ -7,7 +7,7 @@ import { CompComponent } from './ingreso/comp.component';
 import { PrimeraComponent } from './Principal/primera/primera.component';
 import { HeaderComponent } from './header/header.component';
 
-import { ExperienciaComponent } from './Principal/experiencia/experiencia.component';
+
 import { CursosComponent } from './Principal/cursos/cursos.component';
 import { ProyectosComponent } from './Principal/proyectos/proyectos.component';
 import { FooterComponent } from './Principal/footer/footer.component';
@@ -22,7 +22,6 @@ import { SeccionesService } from './Services/secciones.service';
     CompComponent,
     HeaderComponent,
     FooterComponent,
-    ExperienciaComponent,
     CursosComponent,
     ProyectosComponent,
     PrimeraComponent

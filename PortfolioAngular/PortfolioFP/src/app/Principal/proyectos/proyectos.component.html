@@ -1,29 +1,27 @@
-
 <div class="container-fluid p-3" *ngFor="let s of itemsSecciones, let i =index">
-        <div class="container-fluid texto">
-            <div class="row justify-content-center">
-                <div class="col-xl-3 col-l-3 col-md-4 col-sm-5 titulocomps">
-                    <h1>
-                        {{s.titulo}}
-                    </h1>
-                </div>
+    <div class="container-fluid texto">
+        <div class="row justify-content-center">
+            <div class="col-xl-3 col-l-3 col-md-4 col-sm-5 titulocomps">
+                <h1>
+                    {{s.titulo}}
+                </h1>
             </div>
-        </div> 
-        <div  *ngFor="let c of itemsConceptos, let i =index" >
-
-            <div class="container-fluid cuadro rounded m-2 shadow" *ngIf="s.id==c.secciones.id">
-                <div class="row text-white text-center align-items-center">
-                    <div class="col-3"  *ngIf="s.id==c.secciones.id" >
-                        <h4 >
-                            {{c.titulo}}
-                        </h4>
-                    </div>
-                    <div class="col-9"   *ngIf="s.id==c.secciones.id" >
-                        <p>
-                            {{c.contenido}}
-                        </p>
-                    </div>
+        </div>
+    </div>
+    <div *ngFor="let c of itemsConceptos, let i =index">
+        <div class="container-fluid cuadro rounded m-2 shadow" *ngIf="s.id==c.secciones.id">
+            <div class="row text-white text-center align-items-center">
+                <div class="col-3" *ngIf="s.id==c.secciones.id">
+                    <h4>
+                        {{c.titulo}}
+                    </h4>
+                </div>
+                <div class="col-9" *ngIf="s.id==c.secciones.id">
+                    <p>
+                        {{c.contenido}}
+                    </p>
                 </div>
             </div>
         </div>
     </div>
+</div>
