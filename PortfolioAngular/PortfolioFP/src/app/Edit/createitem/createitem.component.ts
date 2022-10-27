@@ -13,6 +13,8 @@ import { SeccionesService } from 'src/app/Services/secciones.service';
 export class CreateitemComponent implements OnInit {
   itemsConceptos: Conceptos[] = [];
   itemsSecciones: Secciones[] = [];
+  concep: Conceptos = new Conceptos();
+  seccion: Secciones = new Secciones();
 
 
   constructor(
@@ -23,14 +25,24 @@ export class CreateitemComponent implements OnInit {
 
   ngOnInit() {
     this.seccionesServicio.obtener()
-      .subscribe(data => {
-        this.itemsSecciones = data;
-        console.log(data)
-      });
+    .subscribe(data => {
+      this.itemsSecciones = data;
+    });
+
     this.conceptosServicio.obtener()
       .subscribe(data1 => {
         this.itemsConceptos = data1;
-        console.log(data1)
+      });
+  }
+
+  agregar() {
+    this.concep.secciones= this.seccion;
+    this.concep.secciones.id= this.seccion.id;
+    this.conceptosServicio.guardar(this.concep)
+      .subscribe(data => {
+        alert("A ver si creo???");
+        console.log(this.concep);
+
       });
   }
 
