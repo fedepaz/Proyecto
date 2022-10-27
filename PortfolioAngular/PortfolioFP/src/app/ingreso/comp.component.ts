@@ -18,7 +18,7 @@ export class CompComponent implements OnInit {
   }
 
   ingreso(){    
-  this.route.navigate(["primera"]);
+  this.route.navigate(["index"]);
   this.pruebita=false;
    }
 

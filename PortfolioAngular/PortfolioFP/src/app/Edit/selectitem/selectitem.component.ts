@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-selectitem',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SelectitemComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+  }
+
+  edit(){
+    this.router.navigate(['edit_item'])
+  }
+
+  nuevo(){
+    this.router.navigate(['create_item'])
   }
 
 }

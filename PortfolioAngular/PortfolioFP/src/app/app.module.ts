@@ -17,6 +17,8 @@ import { EditseccionComponent } from './Edit/editseccion/editseccion.component';
 import { EdititemComponent } from './Edit/edititem/edititem.component';
 import { CreateseccionComponent } from './Edit/createseccion/createseccion.component';
 import { CreateitemComponent } from './Edit/createitem/createitem.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { InicioComponent } from './edit/inicio/inicio.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { CreateitemComponent } from './Edit/createitem/createitem.component';
     EditseccionComponent,
     EdititemComponent,
     CreateseccionComponent,
-    CreateitemComponent
+    CreateitemComponent,
+    NotfoundComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,

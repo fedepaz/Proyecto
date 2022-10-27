@@ -14,7 +14,6 @@ export class ProyectosComponent implements OnInit {
 
   itemsConceptos: Conceptos[]=[];
   itemsSecciones: Secciones[]=[];
-  combinado: any[] = [];
 
 
   constructor(
