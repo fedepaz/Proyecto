@@ -13,6 +13,8 @@ import { SeccionesService } from 'src/app/Services/secciones.service';
 export class EdititemComponent implements OnInit {
   itemsConceptos: Conceptos[] = [];
   itemsSecciones: Secciones[] = [];
+  conceptoEditado: Conceptos = new Conceptos();
+  conceptoEliminado: Conceptos = new Conceptos();
 
 
   constructor(
@@ -25,13 +27,32 @@ export class EdititemComponent implements OnInit {
     this.seccionesServicio.obtener()
       .subscribe(data => {
         this.itemsSecciones = data;
-        console.log(data)
       });
     this.conceptosServicio.obtener()
       .subscribe(data1 => {
         this.itemsConceptos = data1;
-        console.log(data1)
       });
   }
 
+  editar(concepto: Conceptos) {
+    this.conceptoEditado = concepto;
+  }
+
+  eliminar(concepto: Conceptos) {
+    console.log(concepto);
+    this.conceptosServicio.eliminarPorId(concepto)
+      .subscribe(data => {
+        this.itemsConceptos = this.itemsConceptos.filter(con => con !== concepto)
+        alert("Se eliminó " + concepto.titulo);
+      });
+  }
+
+  enviar(concepto: Conceptos) {
+    console.log(concepto);
+    this.conceptosServicio.editarPorId(concepto)
+      .subscribe(data => {
+        concepto = data;
+        alert("Sección Editada")
+      })
+  }
 }

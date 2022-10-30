@@ -15,7 +15,7 @@ export class ConceptoService {
 
   obtener() {
     return this.http.get<Conceptos[]>(this.direccion);
-    };
+  };
 
 
   obtenerPorId(id: number) {
@@ -34,7 +34,7 @@ export class ConceptoService {
 
 
   eliminarPorId(concepto: Conceptos) {
-    this.http.delete<Conceptos>(this.direccion + "/" + concepto.id);
+    return this.http.delete<Conceptos>(this.direccion + "/" + concepto.id);
   };
 }
 

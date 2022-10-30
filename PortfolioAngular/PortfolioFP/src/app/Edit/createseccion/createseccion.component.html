@@ -16,16 +16,11 @@
                     <div class="row text-black text-center align-items-center m-3">
 
                         <div class="col align-content-center">
-                            <label for="staticEmail2" class="visually-hidden">Email</label>
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail2"
-                                value="titulo seccion(?)">
+                            <label for="titulo" class="visually-hidden">seccion</label>
+                            <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Titulo Seccion"  [(ngModel)]="seccion.titulo">
                         </div>
                         <div class="col align-content-center">
-                            <label for="inputPassword2" class="visually-hidden">seccion</label>
-                            <input type="text" class="form-control" id="inputPassword2" placeholder="nombre seccion">
-                        </div>
-                        <div class="col align-content-center">
-                            <button type="submit" class="btn btn-secondary mb-3">Crear Sección</button>
+                            <button type="submit" class="btn btn-secondary mb-3" (click)="crearSeccion()">Crear Sección</button>
                         </div>
                     </div>
                 </form>

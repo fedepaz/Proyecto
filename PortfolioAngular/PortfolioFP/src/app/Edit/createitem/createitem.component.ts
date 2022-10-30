@@ -25,9 +25,9 @@ export class CreateitemComponent implements OnInit {
 
   ngOnInit() {
     this.seccionesServicio.obtener()
-    .subscribe(data => {
-      this.itemsSecciones = data;
-    });
+      .subscribe(data => {
+        this.itemsSecciones = data;
+      });
 
     this.conceptosServicio.obtener()
       .subscribe(data1 => {
@@ -36,13 +36,11 @@ export class CreateitemComponent implements OnInit {
   }
 
   agregar() {
-    this.concep.secciones= this.seccion;
-    this.concep.secciones.id= this.seccion.id;
+    this.concep.secciones = this.seccion;
     this.conceptosServicio.guardar(this.concep)
       .subscribe(data => {
         alert("A ver si creo???");
         console.log(this.concep);
-
       });
   }
 

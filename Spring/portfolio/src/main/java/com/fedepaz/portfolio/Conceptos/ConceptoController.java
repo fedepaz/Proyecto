@@ -53,20 +53,14 @@ public class ConceptoController {
 	}
 
 	@PutMapping("/{id}")
-	public ResponseEntity<Concepto> editarConcepto(@PathVariable int id, @Valid @RequestBody Concepto concept) {
+	public ResponseEntity<Concepto> editarConcepto(@PathVariable int id, @RequestBody Concepto concept) {
 		
-		Secciones seccionesOptional = seccionesService.mostrarPorId(id);
-
-		if (seccionesOptional==null) {
-			return ResponseEntity.unprocessableEntity().build();
-		}
-
+		
 		Concepto conceptoOptional = conceptoService.mostrarPorId(id);
 
 		if (conceptoOptional == null) {
 			return ResponseEntity.unprocessableEntity().build();
 		}
-		concept.setSecciones(seccionesOptional);
 		concept.setId(conceptoOptional.getId());
 		conceptoService.agregar(concept);
 

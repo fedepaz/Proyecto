@@ -13,6 +13,8 @@ import { SeccionesService } from 'src/app/Services/secciones.service';
 export class EditseccionComponent implements OnInit {
   itemsConceptos: Conceptos[] = [];
   itemsSecciones: Secciones[] = [];
+  seccionEliminada: Secciones = new Secciones();
+  seccionEditada: Secciones = new Secciones();
 
 
   constructor(
@@ -25,13 +27,31 @@ export class EditseccionComponent implements OnInit {
     this.seccionesServicio.obtener()
       .subscribe(data => {
         this.itemsSecciones = data;
-        console.log(data)
       });
     this.conceptosServicio.obtener()
       .subscribe(data1 => {
         this.itemsConceptos = data1;
-        console.log(data1)
       });
   }
 
+  editar(seccion: Secciones) {
+    this.seccionEditada = seccion;
+  }
+
+
+  eliminar(seccion: Secciones) {
+    console.log(seccion);
+    this.seccionesServicio.eliminarPorId(seccion)
+      .subscribe(data => {
+        alert("Sección eliminada...")
+      })
+  }
+
+  enviar(seccion: Secciones) {
+    this.seccionesServicio.editarPorId(seccion)
+      .subscribe(data => {
+        seccion = data;
+        alert("Sección Editada")
+      })
+  }
 }

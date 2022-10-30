@@ -9,7 +9,7 @@ import { Secciones } from '../Modelos/Secciones';
 
 export class SeccionesService {
 
-  
+
 
   private direccion = 'http://localhost:8080/portfolio/secciones';
 
@@ -38,16 +38,4 @@ export class SeccionesService {
   eliminarPorId(seccion: Secciones) {
     return this.http.delete<Secciones>(this.direccion + "/" + seccion.id);
   };
-
-  obtenerLista(lista:Secciones[]){
-    let listaRetorno=[];
-    for (let n of lista){
-      listaRetorno.push(n.conceptos)
-    }
-    return listaRetorno;
-    
-  }
-
-
 }
-

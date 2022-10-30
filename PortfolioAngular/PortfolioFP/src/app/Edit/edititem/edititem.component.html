@@ -1,20 +1,21 @@
-<div class="container-fluid" for="edititem">
+<div class="container-fluid m-0" for="edititem">
     <div class="container-fluid p-1">
         <div class="container-fluid p-3">
             <div class="container-fluid texto">
                 <div class="row justify-content-center text-center">
-                    <div class="col-xl-3 col-l-3 col-md-4 col-sm-5 titulocomps">
+                    <div class="col-xl-3 col-l-3 col-md-4 col-sm-5 titulocomps m-1">
                         <h1>
                             EDITAR ITEM
                         </h1>
                     </div>
                 </div>
             </div>
-            <div class="container-fluid cuadro rounded m-auto p-1 shadow">
-                <table class="table text-center">
+            <div class="container-fluid bg-dark cuadro rounded m-auto p-1 shadow">
+                <table class="table table-hover table-striped table-sm table-dark text-center">
                     <thead>
-                        <tr>
+                        <tr style="text-transform: uppercase">
                             <th scope="col">Seccion</th>
+                            <th scope="col">Id</th>
                             <th scope="col">Titulo</th>
                             <th scope="col">Descripción</th>
                             <th scope="col">Accion</th>
@@ -22,17 +23,19 @@
                     </thead>
                     <tbody>
                         <tr *ngFor="let c of itemsConceptos">
-                            <th scope="row">{{c.secciones.titulo}}</th>
+                            <th>{{c.secciones.titulo}}</th>
+                            <td>{{c.id}}</td>
                             <td>{{c.titulo}}</td>
                             <td>{{c.contenido}}</td>
                             <td>
                                 <div class="container-2">
-
-                                    <button type="submit" class="btn btn-secondary">Seleccionar</button>
+                                    <button type="submit" class="btn btn-info p-2 m-1"
+                                        (click)="editar(c)">Editar</button>
+                                    <button class="btn btn-danger p-2 m-1" (click)="eliminar(c)">Eliminar</button>
                                 </div>
                             </td>
                         </tr>
-                        
+
                     </tbody>
                 </table>
             </div>
@@ -40,15 +43,17 @@
         <div class="container-fluid cuadro rounded m-auto p-1 shadow">
             <div class="row text-black text-center align-items-center m-3">
                 <div class="col-4">
-                    <label for="exampleFormControlInput1" class="form-label">Titulo Item</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Titulo">
+                    <label for="titulo" class="form-label">Titulo Item</label>
+                    <input type="text" class="form-control" id="titulo" placeholder={{conceptoEditado.titulo}}
+                        [(ngModel)]="conceptoEditado.titulo">
                 </div>
                 <div class="col-6">
-                    <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1"></textarea>
+                    <label for="contenido" class="form-label">Descripción</label>
+                    <textarea class="form-control" id="contenido" placeholder={{conceptoEditado.contenido}}
+                        [(ngModel)]="conceptoEditado.contenido"></textarea>
                 </div>
                 <div class="col-2">
-                    <button type="submit" class="btn btn-secondary">Agregar</button>
+                    <button type="submit" class="btn btn-secondary" (click)="enviar(conceptoEditado)">Agregar</button>
                 </div>
             </div>
         </div>
