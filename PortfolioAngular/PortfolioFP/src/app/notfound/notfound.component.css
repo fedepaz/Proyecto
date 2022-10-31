@@ -1,15 +1,9 @@
 
-.btnsi {
-    background: #B9BC1D;
-    mix-blend-mode: lighten;
-    border-radius: 20px;
-    flex: 0 0 50px;
+.texto1 {
+    font-family: "Waiting for the Sunrise";
+    font-style: normal;
+    font-weight: 1500;
+    font-size: 56px;
+    line-height: 60px;
+    color: #c30c0c;
   }
-  
-  
-  .btnsi:hover {
-    background: #B9BC1D !important;
-    border-radius: 20px !important;
-    border: #B9BC1D 25px !important;
-  }
-  

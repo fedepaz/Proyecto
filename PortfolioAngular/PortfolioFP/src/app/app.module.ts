@@ -19,6 +19,9 @@ import { CreateseccionComponent } from './Edit/createseccion/createseccion.compo
 import { CreateitemComponent } from './Edit/createitem/createitem.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { InicioComponent } from './edit/inicio/inicio.component';
+import { RegresarComponent } from './notfound/regresar/regresar.component';
+import { SalirComponent } from './edit/salir/salir.component';
+import { BtnregresoinicioeditComponent } from './edit/btnregresoinicioedit/btnregresoinicioedit.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,10 @@ import { InicioComponent } from './edit/inicio/inicio.component';
     CreateseccionComponent,
     CreateitemComponent,
     NotfoundComponent,
-    InicioComponent
+    InicioComponent,
+    RegresarComponent,
+    SalirComponent,
+    BtnregresoinicioeditComponent
   ],
   imports: [
     BrowserModule,

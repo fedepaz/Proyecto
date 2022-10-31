@@ -68,7 +68,7 @@ public class ConceptoController {
 	}
 
 	@DeleteMapping("/{id}")
-	public ResponseEntity<Concepto> eliminarConcepto(@PathVariable int id, @RequestBody Concepto concept) {
+	public ResponseEntity<Concepto> eliminarConcepto(@PathVariable int id) {
 		Concepto conceptoOptional = conceptoService.mostrarPorId(id);
 
 		if (conceptoOptional == null) {

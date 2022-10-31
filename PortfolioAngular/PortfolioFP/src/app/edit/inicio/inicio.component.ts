@@ -13,8 +13,4 @@ export class InicioComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  salir(){
-    this.router.navigate(['index'])
-  }
-
 }

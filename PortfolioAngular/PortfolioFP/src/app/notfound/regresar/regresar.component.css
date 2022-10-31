@@ -1,0 +1,27 @@
+
+.fondo{
+    padding-bottom: 120px !important;
+  }
+
+.btnsi {
+  background: #B9BC1D;
+  mix-blend-mode: lighten;
+  border-radius: 20px;
+  flex: 0 0 50px;
+}
+
+
+.btnsi:hover {
+  background: #B9BC1D !important;
+  border-radius: 20px !important;
+  border: #B9BC1D 25px !important;
+}
+
+.texto2 {
+  font-family: "Waiting for the Sunrise";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 60px;
+  color: #B9BC1D;
+}

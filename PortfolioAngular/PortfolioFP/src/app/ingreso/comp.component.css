@@ -1,19 +1,21 @@
 body {
-    background-image: url("src/assets/img/FrontPage.svg"), url("src/assets/img/Back.png");
-    background-position: center, center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: auto, cover;
-    padding: 100em, 100em;
-  
-  }
-  
+  background-image: url("src/assets/img/FrontPage.svg"), url("src/assets/img/Back.png");
+  background-position: center, center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: auto, cover;
+  padding: 100em, 100em;
+
+}
+
 
 .btnsi {
   background: #B9BC1D;
   mix-blend-mode: lighten;
   border-radius: 20px;
   flex: 0 0 50px;
+  font-family: "Waiting for the Sunrise";
+  font-size: 26px;
 }
 
 
@@ -21,4 +23,8 @@ body {
   background: #B9BC1D !important;
   border-radius: 20px !important;
   border: #B9BC1D 25px !important;
+}
+
+.fondo {
+  padding-bottom: 120px !important;
 }

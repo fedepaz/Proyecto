@@ -29,12 +29,14 @@
 
 .btn {
   border-radius: 20px !important;
+  font-family: "Waiting for the Sunrise";
+  font-size: 26px;
 }
 
 .btn:hover {
   background: linear-gradient(180deg, #434343 0%, #252525 29.17%, #212121 66.67%, #000000 100%);
   border-radius: 20px !important;
-  border: #666666 25px !important;
+  border: #666666 35px !important;
 }
 
 .texto {
@@ -49,4 +51,18 @@
 .titulocomps {
   background: linear-gradient(180deg, #000000 0%, #252525 29.17%, #212121 66.67%, #434343 100%);
   border-radius: 50px;
+}
+
+.texto.parrafo {
+  font-family: "Waiting for the Sunrise";
+  font-style: italic;
+  font-weight: 300;
+  font-size: 46px;
+  line-height: 60px;
+  color: #B9BC1D;
+}
+
+.padinterno{
+  padding-top: 75px;
+  padding-bottom: 100px;
 }

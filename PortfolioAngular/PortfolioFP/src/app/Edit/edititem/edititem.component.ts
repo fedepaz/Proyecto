@@ -42,7 +42,6 @@ export class EdititemComponent implements OnInit {
     console.log(concepto);
     this.conceptosServicio.eliminarPorId(concepto)
       .subscribe(data => {
-        this.itemsConceptos = this.itemsConceptos.filter(con => con !== concepto)
         alert("Se eliminó " + concepto.titulo);
       });
   }

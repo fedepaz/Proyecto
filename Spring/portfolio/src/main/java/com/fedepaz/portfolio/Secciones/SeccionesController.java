@@ -53,7 +53,7 @@ public class SeccionesController {
 	}
 
 	@DeleteMapping("/{id}")
-	public ResponseEntity<Secciones> elminarSeccion(@PathVariable int id, @RequestBody Secciones seccion) {
+	public ResponseEntity<Secciones> elminarSeccion(@PathVariable int id) {
 		Secciones seccionesOptional = seccionesService.mostrarPorId(id);
 
 		if (seccionesOptional == null) {
