@@ -1,11 +1,10 @@
 body {
-  background-image: url("src/assets/img/FrontPage.svg"), url("src/assets/img/Back.png");
-  background-position: center, center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: auto, cover;
-  padding: 100em, 100em;
-
+  background-image: url("src/assets/img/FrontPage.svg"), url("src/assets/img/Back.png") !important;
+  background-position: center, center !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+  background-size: auto, cover !important;
+  padding: 100em, 100em !important;
 }
 
 

@@ -5,6 +5,7 @@ import { CreateseccionComponent } from './Edit/createseccion/createseccion.compo
 import { EdititemComponent } from './Edit/edititem/edititem.component';
 import { EditseccionComponent } from './Edit/editseccion/editseccion.component';
 import { InicioComponent } from './edit/inicio/inicio.component';
+import { LoginComponent } from './edit/login/login.component';
 import { SelectitemComponent } from './Edit/selectitem/selectitem.component';
 import { SelectseccionComponent } from './Edit/selectseccion/selectseccion.component';
 import { CompComponent } from './ingreso/comp.component';
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: '', component: CompComponent },
   { path: 'index', component: PrimeraComponent },
   { path: 'portfolio', component: ProyectosComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'edit', component: InicioComponent },
   { path: 'select_seccion', component: SelectseccionComponent },
   { path: 'select_item', component: SelectitemComponent },

@@ -39,8 +39,8 @@ export class CreateitemComponent implements OnInit {
     this.concep.secciones = this.seccion;
     this.conceptosServicio.guardar(this.concep)
       .subscribe(data => {
-        alert("A ver si creo???");
-        console.log(this.concep);
+        alert("Item nuevo agregado");
+        this.router.navigate(['edit']);
       });
   }
 

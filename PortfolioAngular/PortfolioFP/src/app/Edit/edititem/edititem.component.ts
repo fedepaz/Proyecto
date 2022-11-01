@@ -39,19 +39,19 @@ export class EdititemComponent implements OnInit {
   }
 
   eliminar(concepto: Conceptos) {
-    console.log(concepto);
     this.conceptosServicio.eliminarPorId(concepto)
       .subscribe(data => {
         alert("Se eliminó " + concepto.titulo);
+        this.router.navigate(['edit']);
       });
   }
 
   enviar(concepto: Conceptos) {
-    console.log(concepto);
     this.conceptosServicio.editarPorId(concepto)
       .subscribe(data => {
         concepto = data;
-        alert("Sección Editada")
+        alert("Sección Editada");
+        this.router.navigate(['edit']);
       })
   }
 }

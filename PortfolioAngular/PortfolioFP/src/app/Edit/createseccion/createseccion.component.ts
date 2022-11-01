@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Secciones } from 'src/app/Modelos/Secciones';
 import { SeccionesService } from 'src/app/Services/secciones.service';
 
@@ -9,20 +10,23 @@ import { SeccionesService } from 'src/app/Services/secciones.service';
 })
 export class CreateseccionComponent implements OnInit {
 
-  seccion:Secciones=new Secciones();
+  seccion: Secciones = new Secciones();
 
-  constructor( private servicioSeccion:SeccionesService) { }
+  constructor(
+    private servicioSeccion: SeccionesService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
 
-  crearSeccion(){
-    this.seccion.conceptos= null;
+  crearSeccion() {
+    this.seccion.conceptos = null;
     this.servicioSeccion.guardar(this.seccion)
-    .subscribe(data=>{
-      alert("Nueva Sección creada");
-      console.log(this.seccion);
-    });
+      .subscribe(data => {
+        alert("Nueva Sección creada");
+        this.router.navigate(['edit']);
+      });
 
-    }
   }
+}

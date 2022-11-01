@@ -22,6 +22,7 @@ import { InicioComponent } from './edit/inicio/inicio.component';
 import { RegresarComponent } from './notfound/regresar/regresar.component';
 import { SalirComponent } from './edit/salir/salir.component';
 import { BtnregresoinicioeditComponent } from './edit/btnregresoinicioedit/btnregresoinicioedit.component';
+import { LoginComponent } from './edit/login/login.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { BtnregresoinicioeditComponent } from './edit/btnregresoinicioedit/btnre
     InicioComponent,
     RegresarComponent,
     SalirComponent,
-    BtnregresoinicioeditComponent
+    BtnregresoinicioeditComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

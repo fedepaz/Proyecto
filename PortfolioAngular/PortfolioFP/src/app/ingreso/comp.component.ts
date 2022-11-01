@@ -10,16 +10,18 @@ import { Router } from '@angular/router';
 })
 export class CompComponent implements OnInit {
 
-  pruebita:boolean=true;
+  pruebita: boolean = true;
 
-  constructor(private route:Router) { }
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
   }
 
-  ingreso(){    
-  this.route.navigate(["index"]);
-  this.pruebita=false;
-   }
+  ingreso() {
+    this.route.navigate(["index"])
+      .then(() => {
+        window.location.reload();
+      })
+  }
 
 }

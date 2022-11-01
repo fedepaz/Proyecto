@@ -1,0 +1,29 @@
+<div class="container padinterno">
+    <div class="row justify-content-center text-center">
+        <div class="col-12 p-3 text-light">
+            <h1> Inicio De Sesión </h1>
+        </div>
+        <div class="col-4 p-2 text-light">
+            <form #formulario="ngForm" (ngSubmit)="login(formulario)">
+                <div class="form-group">
+                    <small name="emailHelp" class="form-text text-muted">Ingrese su e-mail.</small>
+                    <input type="email" class="form-control" name="email" placeholder="e-mail" ngModel>
+                </div>
+                <div class="form-group">
+                    <small name="passHelp" class="form-text text-muted">Ingrese su Contraseña.</small>
+                    <input type="password" class="form-control" name="pass" placeholder="Password" ngModel>
+                </div>
+                <div class="row justify-content-center text-center pt-2">
+                    <div class="col">
+                        <button type="submit" class="btn btn-primary">Ingresar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row justify-content-center text-center pt-5">
+        <div class="col">
+            <app-salir></app-salir>
+        </div>
+    </div>
+</div>

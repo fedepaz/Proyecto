@@ -40,10 +40,10 @@ export class EditseccionComponent implements OnInit {
 
 
   eliminar(seccion: Secciones) {
-    console.log(seccion);
     this.seccionesServicio.eliminarPorId(seccion)
       .subscribe(data => {
-        alert("Sección eliminada...")
+        alert("Sección eliminada...");
+        this.router.navigate(['edit']);
       })
   }
 
@@ -51,7 +51,8 @@ export class EditseccionComponent implements OnInit {
     this.seccionesServicio.editarPorId(seccion)
       .subscribe(data => {
         seccion = data;
-        alert("Sección Editada")
+        alert("Sección Editada");
+        this.router.navigate(['edit']);
       })
   }
 }
