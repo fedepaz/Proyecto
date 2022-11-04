@@ -11,7 +11,7 @@ export class SeccionesService {
 
 
 
-  private direccion = 'http://localhost:8080/portfolio/secciones';
+  private direccion = 'https://stormy-shore-37434.herokuapp.com/portfolio/secciones';
 
   constructor(private http: HttpClient) { }
 

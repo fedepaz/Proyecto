@@ -26,12 +26,10 @@ export class ProyectosComponent implements OnInit {
     this.seccionesServicio.obtener()
       .subscribe(data => {
         this.itemsSecciones = data;
-        console.log(data)
       });
     this.conceptosServicio.obtener()
       .subscribe(data1 => {
         this.itemsConceptos = data1;
-        console.log(data1)
       });
   }
   

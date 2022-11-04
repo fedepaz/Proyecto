@@ -9,7 +9,7 @@ import { Conceptos } from '../Modelos/Conceptos';
 
 export class ConceptoService {
 
-  private direccion = 'http://localhost:8080/portfolio/conceptos';
+  private direccion = 'https://stormy-shore-37434.herokuapp.com/portfolio/conceptos';
 
   constructor(private http: HttpClient) { }
 
