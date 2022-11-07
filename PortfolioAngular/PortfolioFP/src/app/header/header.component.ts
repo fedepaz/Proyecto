@@ -7,13 +7,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  constructor( private router:Router) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  login(){
-    this.router.navigate(["login"]);
+  login() {
+    this.router.navigate(["login"])
+      .then(() => {
+        window.location.reload();
+      })
   }
 
 }

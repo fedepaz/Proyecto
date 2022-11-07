@@ -10,25 +10,29 @@
                     </div>
                 </div>
             </div>
-            <div class="container-fluid bg-dark cuadro rounded m-auto p-1 shadow">
+            <div
+                class="container-fluid bg-dark cuadro rounded m-auto p-1 shadow align-content-center table-responsive-md">
                 <table class="table table-hover table-dark text-center">
                     <thead>
                         <tr style="text-transform: uppercase">
-                            <th scope="col">Id</th>
                             <th scope="col">Titulo</th>
                             <th scope="col">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor="let s of itemsSecciones">
-                            <th>{{s.id}}</th>
                             <td>{{s.titulo}}</td>
                             <td>
-                                <div class="container-2">
-                                    <button type="submit" class="btn btn-info p-2 m-1"
-                                        (click)="editar(s)">Editar</button>
-                                    <button type="submit" class="btn btn-danger p-2 m-1"
-                                        (click)="eliminar(s)">Eliminar</button>
+                                <div class="container-fluid">
+                                    <div class="row align-items-center">
+                                        <div class="col-sm-6"> <button type="submit" class="btn btn-info p-2 m-1"
+                                                (click)="editar(s)">Editar</button>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <button type="submit" class="btn btn-danger p-2 m-1"
+                                                (click)="eliminar(s)">Eliminar</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </td>
                         </tr>
@@ -41,12 +45,12 @@
         <div class="container-fluid cuadro rounded m-auto p-1 shadow">
             <form>
                 <div class="row text-black text-center align-items-center m-3">
-                    <div class="col align-content-center">
+                    <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-8 align-content-center">
                         <label for="titulo" class="visually-hidden">seccion</label>
                         <input type="text" class="form-control" id="titulo" name="titulo"
                             placeholder="{{seccionEditada.titulo}}" [(ngModel)]="seccionEditada.titulo">
                     </div>
-                    <div class="col align-content-center">
+                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 align-content-center p-2">
                         <button type="submit" class="btn btn-secondary mb-3" (click)="enviar(seccionEditada)">Editar
                             Titulo Seccion</button>
                     </div>

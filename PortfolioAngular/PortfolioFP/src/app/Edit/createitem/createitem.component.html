@@ -1,50 +1,49 @@
 <div class="container-fluid padinterno" for="createitem">
 
-    <div class="container-fluid p-1">
-        <div class="container-fluid p-3">
+    <div class="container-fluid">
+        <div class="container-fluid p-1">
             <div class="container-fluid texto">
                 <div class="row justify-content-center text-center">
-                    <div class="col-xl-3 col-l-3 col-md-4 col-sm-5 titulocomps">
+                    <div class="col-xl-3 col-l-3 col-md-6 col-sm-8 titulocomps">
                         <h1>
                             AGREGAR ITEM
                         </h1>
                     </div>
                 </div>
             </div>
-
             <form>
                 <div class="container-fluid cuadro">
                     <div class="form-check">
-                        <div class="row text-black text-center align-items-end m-3">
-                            <div class="col-3 align-content-center rounded m-auto p-1 shadow"
-                                *ngFor="let s of itemsSecciones">
-                                <label class="form-check-label" for="{{s.id}}">
-                                    <input class="form-check-input" type="radio" id="{{s.id}}" value="{{s.id}}"
-                                        name="alguna cosa" [(ngModel)]="seccion.id">
-                                    {{s.titulo}}
-                                </label>
+                        <div class="row">
+                            <div class="col">
+                                <div class="btn-group p-1 text-lowercase" role="group" aria-label="Basic radio toggle button group"
+                                    *ngFor="let a of itemsSecciones">
+                                    <input type="radio" class="btn-check form-check-input p-2" value="{{a.id}}"
+                                        name="{{a.titulo}}" id="{{a.id}}" autocomplete="off" (click)="seccion.id"
+                                        [(ngModel)]="seccion.id">
+                                    <label class="btn btn-outline-light" for="{{a.id}}">{{a.titulo}}</label>
+                                </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </form>
 
             <div class="container-fluid cuadro rounded m-auto p-1 shadow">
-                <div class="row text-black text-center align-items-center m-3">
+                <div class="row text-black text-center align-items-center m-3 fs-4 ">
 
-                    <div class="col-4">
-                        <label name="tituloConcepto" class="form-label">Titulo Item</label>
-                        <input type="email" class="form-control" name="tituloConcepto" placeholder="Titulo"
+                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 ">
+                        <label name="tituloConcepto" class="form-label text-light">Titulo Item</label>
+                        <input type="email" class="form-control " name="tituloConcepto" placeholder="Titulo"
                             [(ngModel)]="concep.titulo">
                     </div>
-                    <div class="col-6">
-                        <label name="contenidoConcepto" class="form-label">Descripción</label>
+                    <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7 ">
+                        <label name="contenidoConcepto" class="form-label text-light">Descripción</label>
                         <textarea class="form-control" name="contenidoConcepto"
                             [(ngModel)]="concep.contenido"></textarea>
                     </div>
-                    <div class="col-2">
-                        <button class="btn btn-secondary" (click)="agregar()">Agregar</button>
+                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 p-2 align-self-end">
+                        <button class="btn btn-secondary " (click)="agregar()">Agregar</button>
                     </div>
                 </div>
 

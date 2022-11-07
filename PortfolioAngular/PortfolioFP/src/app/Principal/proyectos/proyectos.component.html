@@ -11,13 +11,13 @@
     <div *ngFor="let c of itemsConceptos, let i =index">
         <div class="container-fluid cuadro rounded m-2 shadow" *ngIf="s.id==c.secciones.id">
             <div class="row text-white text-center align-items-center">
-                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3" *ngIf="s.id==c.secciones.id">
-                    <h4 style="text-transform: capitalize">
+                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 " *ngIf="s.id==c.secciones.id">
+                    <h4 style="text-transform: capitalize" class="fs-2 p-4 fw-bold">
                         {{c.titulo}}
                     </h4>
                 </div>
                 <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-9 col-sm-9" *ngIf="s.id==c.secciones.id">
-                    <p>
+                    <p class="fs-5 p-2 lh-1">
                         {{c.contenido}}
                     </p>
                 </div>

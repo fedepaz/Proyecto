@@ -1,4 +1,4 @@
-<div class="container-fluid m-0 padinterno"  for="edititem">
+<div class="container-fluid m-0 padinterno" for="edititem">
     <div class="container-fluid p-1">
         <div class="container-fluid p-3">
             <div class="container-fluid texto">
@@ -10,12 +10,10 @@
                     </div>
                 </div>
             </div>
-            <div class="container-fluid bg-dark cuadro rounded m-auto p-1 shadow">
+            <div class="container-fluid bg-dark cuadro rounded m-auto p-1 shadow align-content-center table-responsive-md">
                 <table class="table table-hover table-striped table-sm table-dark text-center">
                     <thead>
                         <tr style="text-transform: uppercase">
-                            <th scope="col">Seccion</th>
-                            <th scope="col">Id</th>
                             <th scope="col">Titulo</th>
                             <th scope="col">Descripción</th>
                             <th scope="col">Accion</th>
@@ -23,15 +21,20 @@
                     </thead>
                     <tbody>
                         <tr *ngFor="let c of itemsConceptos">
-                            <th>{{c.secciones.titulo}}</th>
-                            <td>{{c.id}}</td>
                             <td>{{c.titulo}}</td>
                             <td>{{c.contenido}}</td>
                             <td>
-                                <div class="container-2">
-                                    <button type="submit" class="btn btn-info p-2 m-1"
-                                        (click)="editar(c)">Editar</button>
-                                    <button class="btn btn-danger p-2 m-1" (click)="eliminar(c)">Eliminar</button>
+                                <div class="container-fluid">
+                                    <div class="row align-items-center">
+                                        <div class="col-lg-6">
+                                            <button type="submit" class="btn btn-info p-2 m-1"
+                                                (click)="editar(c)">Editar</button>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <button class="btn btn-danger p-2 m-1"
+                                                (click)="eliminar(c)">Eliminar</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </td>
                         </tr>
@@ -42,17 +45,17 @@
         </div>
         <div class="container-fluid cuadro rounded m-auto p-1 shadow">
             <div class="row text-black text-center align-items-center m-3">
-                <div class="col-4">
+                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 ">
                     <label for="titulo" class="form-label">Titulo Item</label>
                     <input type="text" class="form-control" id="titulo" placeholder={{conceptoEditado.titulo}}
                         [(ngModel)]="conceptoEditado.titulo">
                 </div>
-                <div class="col-6">
+                <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7 ">
                     <label for="contenido" class="form-label">Descripción</label>
                     <textarea class="form-control" id="contenido" placeholder={{conceptoEditado.contenido}}
                         [(ngModel)]="conceptoEditado.contenido"></textarea>
                 </div>
-                <div class="col-2">
+                <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 p-2 align-self-end">
                     <button type="submit" class="btn btn-secondary" (click)="enviar(conceptoEditado)">Agregar</button>
                 </div>
             </div>
