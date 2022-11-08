@@ -1,5 +1,5 @@
 body {
-  background-image: url("src/assets/img/FrontPage.svg"), url("src/assets/img/Back.png") !important;
+  background-image: url("../../assets/img/FrontPage.svg"), url("../../assets/img/Back.png") !important;
   background-position: center, center !important;
   background-attachment: fixed !important;
   background-repeat: no-repeat !important;
