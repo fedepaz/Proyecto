@@ -26,8 +26,12 @@
                                 </button>
                             </div>
                             <div class="btn-group" role="group">
-                                <button type="button" class="btn" (click)="login()">
+                                <button type="button" class="btn" (click)="login()" *ngIf="!estaLogin()">
                                     <img src="../../assets/img/Login.svg">
+                                </button>
+
+                                <button type="button" class="btn" (click)="logout()" *ngIf="estaLogin()">
+                                    <img src="../../assets/img/Logout.svg">
                                 </button>
                             </div>
                         </div>

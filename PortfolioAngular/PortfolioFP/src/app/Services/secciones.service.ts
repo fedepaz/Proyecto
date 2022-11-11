@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Secciones } from '../Modelos/Secciones';
+import { LoginService } from './login.service';
 
 
 @Injectable({
@@ -13,7 +14,7 @@ export class SeccionesService {
 
   private direccion = 'https://stormy-shore-37434.herokuapp.com/portfolio/secciones';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private loginService: LoginService) { }
 
   obtener() {
     return this.http.get<Secciones[]>(this.direccion);

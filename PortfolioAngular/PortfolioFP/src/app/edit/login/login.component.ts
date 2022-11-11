@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LoginService } from 'src/app/Services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -9,19 +10,22 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor( private router:Router) { }
+  constructor(private router: Router, private loginService: LoginService) { }
 
   ngOnInit(): void {
   }
 
-  login(form:NgForm){   
+  login(form: NgForm) {
+    
 
-    const email= form.value.email;
+    const email = form.value.email;
     const pass = form.value.pass;
     console.log(email, pass);
+    this.loginService.login(email, pass)
+    console.log(this.loginService.getIdToken());
 
   }
-  ingresar(){
+  ingresar() {
     this.router.navigate(['edit'])
   }
 
