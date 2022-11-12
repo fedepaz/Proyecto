@@ -23,13 +23,14 @@ import { RegresarComponent } from './notfound/regresar/regresar.component';
 import { SalirComponent } from './edit/salir/salir.component';
 import { BtnregresoinicioeditComponent } from './edit/btnregresoinicioedit/btnregresoinicioedit.component';
 import { LoginComponent } from './edit/login/login.component';
-import { environment } from 'src/environments/environment';
-import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { LoginService } from './Services/login.service';
+import { AuthGuard } from 'src/shared/auth.guard';
+import { CookieService } from 'ngx-cookie-service';
+
 
 @NgModule({
   declarations: [
@@ -58,13 +59,14 @@ import { LoginService } from './Services/login.service';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    AngularFireModule.initializeApp(environment.firebase),
+
     AngularFireAuthModule,
     AngularFirestoreModule,
     AngularFireStorageModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AppRoutingModule
   ],
-  providers: [ConceptoService, SeccionesService, LoginService],
+  providers: [ConceptoService, SeccionesService, LoginService, AuthGuard, CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from 'src/shared/auth.guard';
 import { CreateitemComponent } from './Edit/createitem/createitem.component';
 import { CreateseccionComponent } from './Edit/createseccion/createseccion.component';
 import { EdititemComponent } from './Edit/edititem/edititem.component';
@@ -18,13 +19,13 @@ const routes: Routes = [
   { path: 'index', component: PrimeraComponent },
   { path: 'portfolio', component: ProyectosComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'edit', component: InicioComponent },
-  { path: 'select_seccion', component: SelectseccionComponent },
-  { path: 'select_item', component: SelectitemComponent },
-  { path: 'edit_seccion', component: EditseccionComponent },
-  { path: 'edit_item', component: EdititemComponent },
-  { path: 'create_seccion', component: CreateseccionComponent },
-  { path: 'create_item', component: CreateitemComponent },
+  { path: 'edit', component: InicioComponent, canActivate: [AuthGuard] },
+  { path: 'select_seccion', component: SelectseccionComponent, canActivate: [AuthGuard] },
+  { path: 'select_item', component: SelectitemComponent, canActivate: [AuthGuard] },
+  { path: 'edit_seccion', component: EditseccionComponent, canActivate: [AuthGuard] },
+  { path: 'edit_item', component: EdititemComponent, canActivate: [AuthGuard] },
+  { path: 'create_seccion', component: CreateseccionComponent, canActivate: [AuthGuard] },
+  { path: 'create_item', component: CreateitemComponent, canActivate: [AuthGuard] },
   { path: '**', component: NotfoundComponent }
 ];
 

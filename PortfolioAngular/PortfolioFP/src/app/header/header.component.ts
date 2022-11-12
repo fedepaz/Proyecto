@@ -20,11 +20,11 @@ export class HeaderComponent implements OnInit {
       })
   }
 
-  estaLogin(){
+  estaLogin() {
     return this.loginService.estaLogin();
   }
 
-  logout(){
+  logout() {
     this.loginService.logout();
   }
 

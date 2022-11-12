@@ -16,17 +16,10 @@ export class LoginComponent implements OnInit {
   }
 
   login(form: NgForm) {
-    
-
     const email = form.value.email;
     const pass = form.value.pass;
-    console.log(email, pass);
-    this.loginService.login(email, pass)
-    console.log(this.loginService.getIdToken());
-
-  }
-  ingresar() {
-    this.router.navigate(['edit'])
+    this.loginService.login(email, pass);
+    
   }
 
 }
