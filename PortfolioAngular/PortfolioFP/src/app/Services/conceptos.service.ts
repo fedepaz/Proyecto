@@ -10,7 +10,7 @@ import { LoginService } from './login.service';
 
 export class ConceptoService {
 
-  private direccion = 'https://stormy-shore-37434.herokuapp.com/portfolio/conceptos';
+  private direccion = 'http://localhost:8080/portfolio/conceptos';
 
   constructor(private http: HttpClient, private loginService: LoginService) { }
 

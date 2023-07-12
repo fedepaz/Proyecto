@@ -1,0 +1,11 @@
+com/fedepaz/portfolio/Secciones/Secciones.class
+com/fedepaz/portfolio/Secciones/SeccionesService.class
+com/fedepaz/portfolio/Secciones/SeccionesRepo.class
+com/fedepaz/portfolio/Conceptos/ConceptoRepo.class
+com/fedepaz/portfolio/Conceptos/ConceptoController.class
+com/fedepaz/portfolio/Conceptos/ConceptoServiceImp.class
+com/fedepaz/portfolio/PortfolioApplication.class
+com/fedepaz/portfolio/Secciones/SeccionesController.class
+com/fedepaz/portfolio/Conceptos/ConceptoService.class
+com/fedepaz/portfolio/Conceptos/Concepto.class
+com/fedepaz/portfolio/Secciones/SeccionesServiceImp.class
