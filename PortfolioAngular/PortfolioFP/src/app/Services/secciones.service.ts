@@ -12,7 +12,7 @@ export class SeccionesService {
 
 
 
-  private direccion = 'http://localhost:8080/portfolio/secciones';
+  private direccion = 'https://taboo-plastic-production.up.railway.app/portfolio/secciones';
 
   constructor(private http: HttpClient, private loginService: LoginService) { }
 

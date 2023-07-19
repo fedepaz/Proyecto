@@ -10,7 +10,7 @@ import { LoginService } from './login.service';
 
 export class ConceptoService {
 
-  private direccion = 'http://localhost:8080/portfolio/conceptos';
+  private direccion = 'https://taboo-plastic-production.up.railway.app/portfolio/conceptos';
 
   constructor(private http: HttpClient, private loginService: LoginService) { }
 
